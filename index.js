@@ -1,14 +1,24 @@
-// function palindrome(str=str) {
-//   str.strip()
-// }
+const str = "2_A3*3#A2";
+const str2 = 'eye';
 
-let str = "2_A3*3#A2";
 
-let clean_str = "";
+let isPalindrome = (str) => {
+  str = str.toLowerCase();
+  const regex = /[a-z0-9]/g;
 
-for(let i = 0; i < str.length; i++) {
-  if(str[i].)
-    console.log(str[i])
+  let clean_str = str.match(regex); // return array
+  clean_str = clean_str.join(""); // changes array back to string
+
+
+  const reversed = clean_str.split("").reverse().join("");
+
+  if(clean_str == reversed) {
+    return console.log("true")
+  } else {
+    return console.log("false")
+  }
 }
 
-// palindrome("2_A3*3# A2");
+
+isPalindrome(str);
+isPalindrome(str2);
