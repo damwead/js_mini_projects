@@ -1,9 +1,6 @@
 const str = "2_A3*3#A2";
 const str2 = 'eye';
 
-let a = [];
-a.
-
 let isPalindrome = (str) => {
   str = str.toLowerCase();
   const regex = /[a-z0-9]/g;
