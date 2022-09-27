@@ -36,33 +36,4 @@ function convertToRoman(num) {
 }
 
 
-
-
-
-
 console.log(convertToRoman(2014));
-
-
-// if (num[last] == 4 || num[last] ==  9) {
-//   if(num[last] == 4) {
-//     inRoman.unshift("IV")
-//   } else {
-//     inRoman.unshift("IX")
-//   }
-// } else if (num[last] > 5) {
-//   inRoman.unshift(`V${"I".repeat(num[last]-5)}`)
-// } else {
-//   inRoman.unshift(`${"I".repeat(num[last])}`)
-// }
-
-// if (num[last-1] == 4 || num[last-1] ==  9) {
-//   if(num[last-1] == 4) {
-//     inRoman.unshift("XL")
-//   } else {
-//     inRoman.unshift("XC")
-//   }
-// } else if (num[last-1] > 5) {
-//   inRoman.unshift(`L${"X".repeat(num[last-1]-5)}`)
-// } else {
-//   inRoman.unshift(`${"X".repeat(num[last-1])}`)
-// } 
