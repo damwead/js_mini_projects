@@ -1,17 +1,19 @@
 // num should be <= 9999
 function convertToRoman(num) {
-  num = num.toString(); // thus we can iterate through it
+  num = num.toString().split("").reverse(); // thus we can iterate through it
   let inRoman = []; // result in roman
-  let last = num.length- 1;
-  console.log(last)
 
   const roms = [["IX" ,"V","IV", "I"], ["XC","L", "XL","X"], ["CM","D", "CD","C"] ]
-  // при 29 прога идет с середины 1, и в конец поэтому выходит IIXC
 
-  for(let i = last; i >= 0; i--) {
+  for(let i = 0; i < num.length; i++) {
+    if(i == 3) {
+      inRoman.unshift("M".repeat(num[i]))
+      return inRoman.join("");
+    }
+    
     let arr = roms[i]
 
-    if(last == 4 && i == 0) {
+    if(i == 3) {
       inRoman.unshift("M".repeat(num[i]))
     }
 
@@ -38,7 +40,7 @@ function convertToRoman(num) {
 
 
 
-console.log(convertToRoman(29));
+console.log(convertToRoman(2014));
 
 
 // if (num[last] == 4 || num[last] ==  9) {
